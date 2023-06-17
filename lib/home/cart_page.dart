@@ -11,6 +11,19 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   List<Item> items = listItems;
 
+  num numOfItems = 0;
+
+  // List <String> ddhc = [
+  //   'fsf',
+  //   'ddd',
+  //   'dsvds',
+  //   'dvsv',
+  //   'afd',
+  //   'ffgsr',
+  //   'rsg',
+  //   'afa',
+  // ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +113,7 @@ class _CartPageState extends State<CartPage> {
                             // mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(height: 18.h),
+                              SizedBox(height: 10.h),
                               Row(
                                 children: [
                                   commonText(
@@ -110,6 +123,77 @@ class _CartPageState extends State<CartPage> {
                                   ),
                                   SizedBox(width: 80.w),
                                   const LikeButton(),
+                                ],
+                              ),
+                              commonText(text: item.dics),
+                              SizedBox(height: 3.h),
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.alarm,
+                                    color: Colors.grey,
+                                  ),
+                                  SizedBox(width: 3.w),
+                                  commonText(text: item.time),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.star_border_outlined,
+                                    color: Colors.grey,
+                                  ),
+                                  SizedBox(width: 3.w),
+                                  commonText(text: item.rating),
+                                  SizedBox(width: 80.w),
+                                  CircleAvatar(
+                                    radius: 10.r,
+                                    backgroundColor: Colors.grey.shade200,
+                                    child: TextButton(
+                                      style: TextButton.styleFrom(
+                                        // ignore: deprecated_member_use
+                                        primary: Colors.black,
+                                        shape: const CircleBorder(),
+                                        padding: EdgeInsets.all(0),
+                                      ),
+                                      onPressed: () {
+                                        if (numOfItems > 0) {
+                                          setState(() {
+                                            numOfItems--;
+                                          });
+                                        }
+                                      },
+                                      child: const Icon(
+                                        Icons.remove,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 5.w),
+                                  commonText(
+                                    text: numOfItems.toString().padLeft(2, '0'),
+                                  ),
+                                  SizedBox(width: 5.w),
+                                  CircleAvatar(
+                                    radius: 10.r,
+                                    backgroundColor: Colors.grey,
+                                    child: TextButton(
+                                      style: TextButton.styleFrom(
+                                        primary: Colors.black,
+                                        shape: const CircleBorder(),
+                                        padding: EdgeInsets.all(0),
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          numOfItems++;
+                                        });
+                                      },
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
@@ -128,13 +212,14 @@ class _CartPageState extends State<CartPage> {
   }
 
   void onDismissed(int index, SliderAction action) {
+    final item = items[index];
     setState(() => items.removeAt(index));
 
     switch (action) {
       case SliderAction.delete:
         _showSnackBar(
           context,
-          "${items.} is deleted",
+          "${item.title} is deleted",
           Colors.black,
           // const Duration(seconds: 50),
           SnackBarAction(
