@@ -99,7 +99,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 buttonMethod(
                     text: "Send",
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                           builder: ((context) => ChangePassword()),

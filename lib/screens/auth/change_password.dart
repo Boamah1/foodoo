@@ -135,7 +135,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       child: buttonMethod(
                           text: "Login",
                           onPressed: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                 builder: ((context) => const Verification()),
