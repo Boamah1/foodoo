@@ -30,12 +30,13 @@ class _SignUpState extends State<SignUp> {
                           padding: EdgeInsets.only(
                             bottom: 110.h,
                           ),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.arrow_back_ios),
-                          ),
+                          // child: IconButton(
+                          //   onPressed: () {},
+                          //   icon: const Icon(Icons.arrow_back_ios),
+                          // ),
                         ),
-                        SizedBox(width: 70.w),
+                        SizedBox(width: 113.w),
+                        // SizedBox(width: 70.w),
                         Padding(
                           padding: EdgeInsets.only(top: 20.h),
                           child: Container(
@@ -135,15 +136,28 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(height: 2.h),
-                    forgotMethod(onTap: () {}),
+                    forgotMethod(onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ForgetPassword(),
+                        ),
+                      );
+                    }),
                     SizedBox(height: 25.h),
                     Center(
                       child: Column(
                         children: [
                           buttonMethod(
-                            text: "Sign up",
-                            onPressed: () {},
-                          ),
+                              text: "Sign up",
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const HomePage(),
+                                  ),
+                                );
+                              }),
                           SizedBox(height: 10.h),
                           boldText(text: 'or continue with', fontSize: 10.sp),
                         ],

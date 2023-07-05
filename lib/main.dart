@@ -27,26 +27,25 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-                brightness: Brightness.light, primarySwatch: Colors.grey),
-            darkTheme: ThemeData(
-                brightness: Brightness.dark, primarySwatch: Colors.grey),
-            themeMode: ThemeMode.light,
-            home:
-                // Seafood()
-                const
-            CartPage()
-            // OrderPage(),
-            // HomePage(),
-            // Verification(),
-            // OnbordingScreen(),
-            // ChangePassword(),
-            // IntroPage1(),
-            // ForgetPassword(),
-            // SignUp(),
-            // showHome! ? const Login() : const OnbordingScreen(),
-            );
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+              brightness: Brightness.light, primarySwatch: Colors.grey),
+          darkTheme: ThemeData(
+              brightness: Brightness.dark, primarySwatch: Colors.grey),
+          themeMode: ThemeMode.light,
+          home:
+              // Seafood()
+              // CartPage()
+              // OrderPage(),
+              // HomePage(),
+              // Verification(),
+              // OnbordingScreen(),
+              // ChangePassword(),
+              // IntroPage1(),
+              // ForgetPassword(),
+              // SignUp(),
+              showHome! ? const Login() : const OnbordingScreen(),
+        );
       },
     );
   }

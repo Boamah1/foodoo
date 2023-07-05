@@ -29,12 +29,13 @@ class _HomePageState extends State<Login> {
                           padding: EdgeInsets.only(
                             bottom: 110.h,
                           ),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.arrow_back_ios),
-                          ),
+                          // child: IconButton(
+                          //   onPressed: () {},
+                          //   icon: const Icon(Icons.arrow_back_ios),
+                          // ),
                         ),
-                        SizedBox(width: 70.w),
+                        //  SizedBox(width: 70.w),
+                        SizedBox(width: 113.w),
                         Padding(
                           padding: EdgeInsets.only(top: 20.h),
                           child: Container(
@@ -108,15 +109,28 @@ class _HomePageState extends State<Login> {
                       ),
                     ),
                     SizedBox(height: 8.h),
-                    forgotMethod(onTap: () {}),
+                    forgotMethod(onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: ((context) => const ForgetPassword()),
+                        ),
+                      );
+                    }),
                     SizedBox(height: 30.h),
                     Center(
                       child: Column(
                         children: [
                           buttonMethod(
-                            text: 'Login',
-                            onPressed: () {},
-                          ),
+                              text: 'Login',
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: ((context) => const HomePage()),
+                                  ),
+                                );
+                              }),
                           SizedBox(height: 10.h),
                           commonText(text: "or collaborate with"),
                           SizedBox(height: 30.h),
@@ -130,7 +144,12 @@ class _HomePageState extends State<Login> {
                                   style: const TextStyle(color: Colors.black),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
-                                      // print("object");
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: ((context) => const SignUp()),
+                                        ),
+                                      );
                                     },
                                 ),
                               ],
