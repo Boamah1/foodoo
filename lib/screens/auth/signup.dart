@@ -1,3 +1,4 @@
+import 'package:foodoo/home/bottom_nav_page.dart';
 import 'package:foodoo/hooks/export.dart';
 
 class SignUp extends StatefulWidget {
@@ -154,7 +155,7 @@ class _SignUpState extends State<SignUp> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) => const HomePage(),
+                                    builder: (_) => const BottomNavPage(),
                                   ),
                                 );
                               }),

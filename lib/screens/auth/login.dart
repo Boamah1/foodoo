@@ -1,3 +1,4 @@
+import 'package:foodoo/home/bottom_nav_page.dart';
 import 'package:foodoo/hooks/export.dart';
 
 class Login extends StatefulWidget {
@@ -76,7 +77,8 @@ class _HomePageState extends State<Login> {
                       obscureText: false,
                       suffixIcon: Padding(
                         padding: EdgeInsets.only(top: 12.h, left: 14.w),
-                        child: FaIcon(
+                        child: 
+                        FaIcon(
                           FontAwesomeIcons.at,
                           size: 15.sp,
                           color: Colors.grey[700],
@@ -127,7 +129,7 @@ class _HomePageState extends State<Login> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: ((context) => const HomePage()),
+                                    builder: ((context) => const BottomNavPage()),
                                   ),
                                 );
                               }),

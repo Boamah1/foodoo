@@ -1,3 +1,4 @@
+import 'package:foodoo/home/bottom_nav_page.dart';
 import 'package:foodoo/hooks/export.dart';
 
 class Verification extends StatefulWidget {
@@ -139,7 +140,7 @@ class _VerificationState extends State<Verification> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => const HomePage()),
+                      builder: ((context) => const BottomNavPage()),
                     ),
                   );
                 },
