@@ -26,12 +26,12 @@ class _VerificationState extends State<Verification> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: ((context) => ChangePassword()),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => ChangePassword()),
+                              ),
+                            );
                           },
                           child: const Icon(Icons.arrow_back_ios),
                         ),
@@ -135,7 +135,14 @@ class _VerificationState extends State<Verification> {
               SizedBox(height: 15.h),
               buttonMethod(
                 text: 'Login',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => const HomePage()),
+                    ),
+                  );
+                },
               ),
             ],
           ),

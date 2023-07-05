@@ -28,7 +28,14 @@ class _ChangePasswordState extends State<ChangePassword> {
                     child: Row(
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => const ForgetPassword()),
+                              ),
+                            );
+                          },
                           icon: const Icon(Icons.arrow_back_ios),
                         ),
                         SizedBox(width: 85.w),
@@ -125,7 +132,16 @@ class _ChangePasswordState extends State<ChangePassword> {
                     ),
                     SizedBox(height: 30.h),
                     Center(
-                      child: buttonMethod(text: "Login"),
+                      child: buttonMethod(
+                          text: "Login",
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => const Verification()),
+                              ),
+                            );
+                          }),
                     ),
                   ],
                 ),

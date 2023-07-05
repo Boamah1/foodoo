@@ -97,9 +97,15 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 ),
                 SizedBox(height: 30.h),
                 buttonMethod(
-                  text: "Send",
-                  onPressed: () {},
-                ),
+                    text: "Send",
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: ((context) => ChangePassword()),
+                        ),
+                      );
+                    }),
               ],
             ),
           ),
