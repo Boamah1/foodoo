@@ -77,8 +77,7 @@ class _HomePageState extends State<Login> {
                       obscureText: false,
                       suffixIcon: Padding(
                         padding: EdgeInsets.only(top: 12.h, left: 14.w),
-                        child: 
-                        FaIcon(
+                        child: FaIcon(
                           FontAwesomeIcons.at,
                           size: 15.sp,
                           color: Colors.grey[700],
@@ -149,7 +148,8 @@ class _HomePageState extends State<Login> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: ((context) => const SignUp()),
+                                          builder: ((context) =>
+                                              const SignUp()),
                                         ),
                                       );
                                     },

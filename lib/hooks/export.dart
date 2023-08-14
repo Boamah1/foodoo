@@ -18,7 +18,7 @@ export 'package:shared_preferences/shared_preferences.dart';
 export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:font_awesome_flutter/font_awesome_flutter.dart';
 export 'package:foodoo/components/font_style.dart';
-export 'package:foodoo/common_widget.dart/widget.dart';
+export 'package:foodoo/common_widget.dart/methods.dart';
 export 'package:foodoo/screens/auth/signup.dart';
 export 'package:foodoo/screens/auth/forget_password.dart';
 export 'package:foodoo/screens/auth/change_password.dart';

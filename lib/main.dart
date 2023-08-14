@@ -34,6 +34,8 @@ class MyApp extends StatelessWidget {
               brightness: Brightness.dark, primarySwatch: Colors.grey),
           themeMode: ThemeMode.light,
           home:
+              // BottomNavPage()
+              // LogOutPage()
               // Seafood()
               // CartPage()
               // OrderPage(),

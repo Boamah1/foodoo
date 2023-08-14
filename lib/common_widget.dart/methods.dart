@@ -98,3 +98,29 @@ Container boxMethod({onChange, controller}) {
     ),
   );
 }
+
+Padding rowmethod({text, onPressed, firsticon}) {
+  return Padding(
+    padding: REdgeInsets.only(left: 20, right: 10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        // Icon(firsticon),
+        firsticon,
+        SizedBox(
+          width: 20.w,
+        ),
+        boldText(text: text, fontSize: 14.0.sp),
+        const Spacer(),
+        IconButton(
+          onPressed: onPressed,
+          icon: const Icon(
+            Icons.arrow_forward_ios,
+            size: 14,
+            color: Colors.black,
+          ),
+        ),
+      ],
+    ),
+  );
+}

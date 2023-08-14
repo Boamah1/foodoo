@@ -154,7 +154,7 @@ class _CartPageState extends State<CartPage> {
                                         // ignore: deprecated_member_use
                                         primary: Colors.black,
                                         shape: const CircleBorder(),
-                                        padding: EdgeInsets.all(0),
+                                        padding: const EdgeInsets.all(0),
                                       ),
                                       onPressed: () {
                                         if (numOfItems > 0) {
@@ -181,14 +181,14 @@ class _CartPageState extends State<CartPage> {
                                       style: TextButton.styleFrom(
                                         primary: Colors.black,
                                         shape: const CircleBorder(),
-                                        padding: EdgeInsets.all(0),
+                                        padding: const EdgeInsets.all(0),
                                       ),
                                       onPressed: () {
                                         setState(() {
                                           numOfItems++;
                                         });
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.add,
                                         color: Colors.white,
                                       ),

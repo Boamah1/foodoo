@@ -15,7 +15,7 @@ Text commonText({color, text, fontSize}) {
     style: TextStyle(
       fontFamily: 'Lobster Two',
       fontSize: fontSize,
-      color: color
+      color: color,
     ),
   );
 }

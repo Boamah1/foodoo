@@ -30,7 +30,7 @@ class _VerificationState extends State<Verification> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: ((context) => ChangePassword()),
+                                builder: ((context) => const ChangePassword()),
                               ),
                             );
                           },
